@@ -1,7 +1,7 @@
 var graph = window.graph || {};
 
 var helpers = {
-    hasClass: function (classes, has) {
+    _hasClass: function (classes, has) {
         if(typeof  classes === 'undefined') {
             return;
         }
@@ -10,6 +10,34 @@ var helpers = {
             return classes[endPos];
         }
         return undefined;
+    },
+    addClass: function (el, _class) {
+        var classes = el.classList;
+        classes.add(_class);
+    },
+    hasClass: function (classes, _class) {
+        var i = 0;
+        for(; i < classes.length; i++) {
+            if(classes[i] === _class) {
+                return true;
+            }
+        }
+    },
+    clearClass: function (el, _class) {
+        var i = 0,
+            classes = el.classList;
+
+        for(; i <classes.length; i++) {
+            if(classes[i] === _class) {
+                classes.remove(_class);
+            }
+        }
+    },
+    clearClassAll: function (els, _class) {
+        var i = 0;
+        for(; i < els.length; i++) {
+            helpers.clearClass(els[i], _class);
+        }
     }
 }
 
@@ -32,17 +60,34 @@ graph.popover = function () {
        methodUI.style.left = offsetMethodUI.left + 'px';
     });
 
+    var lis = methodUI.querySelectorAll("li");
+    lis.forEach(function(item, index) {
+        item.addEventListener("click", function (evt) {
+            var classes = this.classList,
+                methodText = document.querySelector(".methodText"),
+                isActiveClass = helpers.hasClass(classes, "_54nd");
+
+            helpers.clearClassAll(lis, "_54nd");
+            if(!isActiveClass) {
+                helpers.addClass(this, "_54nd");
+                methodText.innerHTML = this.querySelector(".text").innerHTML;
+            }
+
+        });
+    });
+    
+
     document.addEventListener("click", function (evt) {
         var el = evt.target,
             closest,
             _target;
-        console.log(evt.target);
+
         if(el.tagName.toLowerCase() === 'a') {
-            _target = helpers.hasClass(el.classList, 'getTokenUIElem') || helpers.hasClass(el.classList, 'methodElem');
+            _target = helpers._hasClass(el.classList, 'getTokenUIElem') || helpers._hasClass(el.classList, 'methodElem');
         }
         else {
             closest = el.parentNode.parentNode;
-            _target = helpers.hasClass(closest.classList, 'getTokenUIElem') || helpers.hasClass(el.parentNode.classList, 'methodElem');
+            _target = helpers._hasClass(closest.classList, 'getTokenUIElem') || helpers._hasClass(el.parentNode.classList, 'methodElem');
         }
 
         if(_target !== "getTokenUIElem") {
