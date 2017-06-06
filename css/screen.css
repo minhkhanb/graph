@@ -101,6 +101,7 @@
     0% {
         opacity: 0
     }
+
     100% {
         opacity: 1
     }
@@ -110,6 +111,7 @@
     0% {
         opacity: 1
     }
+
     100% {
         opacity: 0
     }
@@ -1651,7 +1653,7 @@ i.img u {
 }
 
 ._569t ._54nd ._54nc {
-    background: url(/rsrc.php/v3/yo/r/Iv23J4ZCwP5.png) left 4px no-repeat;
+    background: url(../images/icon5.png) left 4px no-repeat;
     font-weight: bold
 }
 
@@ -2013,7 +2015,7 @@ a._p {
 }
 
 ._558b ._54nd ._54nc {
-    background: url(/rsrc.php/v3/yo/r/Iv23J4ZCwP5.png) left 7px no-repeat;
+    background: url(../images/icon5.png) left 7px no-repeat;
     font-weight: bold
 }
 
@@ -2245,6 +2247,7 @@ a._p {
     0% {
         transform: rotate(0deg)
     }
+
     100% {
         transform: rotate(360deg)
     }
@@ -3629,6 +3632,7 @@ div._2acs h4 {
     0% {
         opacity: 0
     }
+
     100% {
         opacity: 1
     }
@@ -3638,6 +3642,7 @@ div._2acs h4 {
     0% {
         opacity: 1
     }
+
     100% {
         opacity: 0
     }
@@ -5179,7 +5184,7 @@ i.img u {
 }
 
 ._569t ._54nd ._54nc {
-    background: url(/rsrc.php/v3/yo/r/Iv23J4ZCwP5.png) left 4px no-repeat;
+    background: url(../images/icon5.png) left 4px no-repeat;
     font-weight: bold
 }
 
@@ -5541,7 +5546,7 @@ a._p {
 }
 
 ._558b ._54nd ._54nc {
-    background: url(/rsrc.php/v3/yo/r/Iv23J4ZCwP5.png) left 7px no-repeat;
+    background: url(../images/icon5.png) left 7px no-repeat;
     font-weight: bold
 }
 
@@ -5773,6 +5778,7 @@ a._p {
     0% {
         transform: rotate(0deg)
     }
+
     100% {
         transform: rotate(360deg)
     }
@@ -7638,9 +7644,11 @@ a._3emk._3emk:hover {
     0% {
         transform: translateY(-6px)
     }
+
     60% {
         transform: translateY(0px)
     }
+
     100% {
         transform: translateY(-6px)
     }
@@ -7756,7 +7764,7 @@ pre._5s-8 li.L0, pre._5s-8 li.L1, pre._5s-8 li.L2, pre._5s-8 li.L3, pre._5s-8 li
 }
 
 .uiMenu .checked .itemAnchor {
-    background: url(/rsrc.php/v3/yo/r/Iv23J4ZCwP5.png) left 4px no-repeat;
+    background: url(../images/icon5.png) left 4px no-repeat;
     font-weight: bold
 }
 
@@ -10560,6 +10568,7 @@ body[dir="rtl"] ._3487 {
     0% {
         opacity: 0
     }
+
     100% {
         opacity: 1
     }
@@ -10569,6 +10578,7 @@ body[dir="rtl"] ._3487 {
     0% {
         opacity: 1
     }
+
     100% {
         opacity: 0
     }
@@ -12110,7 +12120,7 @@ i.img u {
 }
 
 ._569t ._54nd ._54nc {
-    background: url(/rsrc.php/v3/yo/r/Iv23J4ZCwP5.png) left 4px no-repeat;
+    background: url(../images/icon5.png) left 4px no-repeat;
     font-weight: bold
 }
 
@@ -12472,7 +12482,7 @@ a._p {
 }
 
 ._558b ._54nd ._54nc {
-    background: url(/rsrc.php/v3/yo/r/Iv23J4ZCwP5.png) left 7px no-repeat;
+    background: url(../images/icon5.png) left 7px no-repeat;
     font-weight: bold
 }
 
@@ -12704,6 +12714,7 @@ a._p {
     0% {
         transform: rotate(0deg)
     }
+
     100% {
         transform: rotate(360deg)
     }
@@ -13767,6 +13778,7 @@ a._p {
     0% {
         opacity: 0
     }
+
     100% {
         opacity: 1
     }
@@ -13776,6 +13788,7 @@ a._p {
     0% {
         opacity: 1
     }
+
     100% {
         opacity: 0
     }
@@ -15317,7 +15330,7 @@ i.img u {
 }
 
 ._569t ._54nd ._54nc {
-    background: url(/rsrc.php/v3/yo/r/Iv23J4ZCwP5.png) left 4px no-repeat;
+    background: url(../images/icon5.png) left 4px no-repeat;
     font-weight: bold
 }
 
@@ -15679,7 +15692,7 @@ a._p {
 }
 
 ._558b ._54nd ._54nc {
-    background: url(/rsrc.php/v3/yo/r/Iv23J4ZCwP5.png) left 7px no-repeat;
+    background: url(../images/icon5.png) left 7px no-repeat;
     font-weight: bold
 }
 
@@ -15911,6 +15924,7 @@ a._p {
     0% {
         transform: rotate(0deg)
     }
+
     100% {
         transform: rotate(360deg)
     }
@@ -16975,6 +16989,12 @@ a._p {
 .sp_jk3wwh-psrm.sx_0655e7 {
     display: none;
 }
+
 ._55pe em {
     display: block;
+}
+
+.getTokenUI,
+.methodUI{
+    left: -9999em;
 }
