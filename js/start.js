@@ -83,9 +83,10 @@ var helpers = {
 
         return searchDistination();
     }
+
 }
 
-graph.popover = function () {
+graph.buildUI = function () {
     var getTokenUIElem = document.querySelector(".getTokenUIElem"),
         getTokenUI = document.querySelector(".getTokenUI"),
         offsetTokenUI = getTokenUIElem.getBoundingClientRect();
@@ -223,6 +224,6 @@ graph.popover = function () {
     });
 }
 graph.init = function () {
-    graph.popover();
+    graph.buildUI();
 }
 window.addEventListener("load", graph.init);
