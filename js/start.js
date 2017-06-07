@@ -69,7 +69,10 @@ graph.popover = function () {
                 text = this.querySelector(".text").innerHTML,
                 addField = document.createElement("div"),
                 methodSubmit = document.querySelector(".methodSubmit"),
-                actionMethod = document.querySelector(".actionMethod");
+                actionMethod = document.querySelector(".actionMethod"),
+                objAddField = document.querySelector(".addField");
+
+
 
             addField.className = "_1pvu addField";
             addField.innerHTML = '<a role="button" tabindex="0">Add a Field</a>';
@@ -82,17 +85,37 @@ graph.popover = function () {
             }
             switch (text) {
                 case 'POST':
-                    console.log(text);
                     methodSubmit.insertBefore(addField, actionMethod.nextSibling);
                     break;
                 case 'GET':
-                    //remove fields
-                    methodSubmit.removeChild(document.querySelector(".addField"));
+                    if(objAddField !== null) {
+                        methodSubmit.removeChild(objAddField);
+                    }
                     break;
                 case 'DELETE':
-                    //remove fields
+                    if(objAddField !== null) {
+                        console.log(objAddField)
+                        methodSubmit.removeChild(objAddField);
+                    }
                     break;
             }
+
+            var btnAddField = addField.querySelector('a');
+            btnAddField.addEventListener("click", function (evt) {
+                var field = document.createElement("div"), fieldHTML;
+
+                fieldHTML = '<label class="_1pvr _55r1 _58ak _3ct8">';
+                fieldHTML += '<input type="text" class="_58al" placeholder="Name" value="">';
+                fieldHTML += '</label>';
+                fieldHTML += '<textarea class="_1pvs" placeholder="Value"></textarea>';
+                fieldHTML += '<button class="_1pvt _50zy _50-0 _50z- _5upp _42ft" type="button" title="Remove">';
+                fieldHTML += '<em class="_4qba" data-intl-translation="Remove" data-intl-trid="">Remove</em>';
+                fieldHTML += '</button>';
+
+                field.className = "_1pvq field";
+                field.innerHTML = fieldHTML;
+                methodSubmit.insertBefore(field, this.parentNode);
+            });
         });
     });
     
