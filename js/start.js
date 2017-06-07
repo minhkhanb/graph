@@ -1,5 +1,15 @@
 var graph = window.graph || {};
 
+var utils = {
+    init: function () {
+        Element.prototype.getFish = function () {
+            console.log('Cam can cau di cau ca ne');
+        }
+    }
+}
+
+utils.init();
+
 var helpers = {
     _hasClass: function (classes, has) {
         if (typeof  classes === 'undefined') {
@@ -14,6 +24,15 @@ var helpers = {
     addClass: function (el, _class) {
         var classes = el.classList;
         classes.add(_class);
+    },
+    removeClass: function (el, _class) {
+        var classes = el.classList;
+
+        for(var i in classes) {
+            if(classes[i] === _class) {
+                classes.remove(classes[i]);
+            }
+        }
     },
     hasClass: function (classes, _class) {
         var i = 0;
@@ -43,6 +62,26 @@ var helpers = {
         for(var i = 0; i < items.length; i++) {
             el.removeChild(items[i]);
         }
+    },
+    closest: function (el, disTag) {                       //tag <= 10 node
+        var result, times = 1;
+
+        var searchDistination = function () {
+            if(times <= 10) {
+                try {
+                    if(el.tagName.toLowerCase() === disTag) {
+                        result = document.querySelector(disTag);
+                        return result;
+                    }
+                    el = el.parentNode;
+                    times++;
+                    return searchDistination();
+                }
+                catch(e) {}
+            }
+        };
+
+        return searchDistination();
     }
 }
 
@@ -55,6 +94,9 @@ graph.popover = function () {
         methodUI = document.querySelector(".methodUI"),
         offsetMethodUI = methodElem.getBoundingClientRect();
 
+    var getTokenCode = document.querySelector(".getTokenCode"),
+        getTokenCodeUI = document.querySelector(".getTokenCodeUI");
+
     getTokenUIElem.addEventListener("click", function (evt) {
         getTokenUI.style.top = offsetTokenUI.top + offsetTokenUI.height + 'px';
         getTokenUI.style.left = offsetTokenUI.left + 'px';
@@ -63,6 +105,10 @@ graph.popover = function () {
     methodElem.addEventListener("click", function (evt) {
         methodUI.style.top = offsetMethodUI.top + offsetMethodUI.height + 'px';
         methodUI.style.left = offsetMethodUI.left + 'px';
+    });
+
+    getTokenCode.addEventListener("click", function (evt) {
+        helpers.removeClass(getTokenCodeUI, "hidden_elem");
     });
 
     var lis = methodUI.querySelectorAll("li");
@@ -146,15 +192,19 @@ graph.popover = function () {
         var el = evt.target,
             closest,
             _target;
-
+        var elem = helpers.closest(el, "li");
         if (el.tagName.toLowerCase() === 'a') {
             _target = helpers._hasClass(el.classList, 'getTokenUIElem') || helpers._hasClass(el.classList, 'methodElem');
         }
         else {
-            if (el.classList.length > 0 && el.tagName.toLowerCase() !== 'button') {
-                closest = el.parentNode.parentNode;
-                _target = helpers._hasClass(closest.classList, 'getTokenUIElem') || helpers._hasClass(el.parentNode.classList, 'methodElem');
+
+            try {
+                if (el.classList.length > 0 && el.tagName.toLowerCase() !== 'button') {
+                    closest = el.parentNode.parentNode;
+                    _target = helpers._hasClass(closest.classList, 'getTokenUIElem') || helpers._hasClass(el.parentNode.classList, 'methodElem') || helpers._hasClass(elem.classList, 'getTokenCode');
+                }
             }
+            catch(e) {}
 
         }
 
@@ -165,6 +215,10 @@ graph.popover = function () {
         if (_target !== "methodElem") {
             methodUI.style.top = "";
             methodUI.style.left = "";
+        }
+        console.log(el)
+        if(_target !== "getTokenCode") {
+            helpers.addClass(getTokenCodeUI, "hidden_elem");
         }
     });
 }
