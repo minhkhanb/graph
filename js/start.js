@@ -2,11 +2,11 @@ var graph = window.graph || {};
 
 var helpers = {
     _hasClass: function (classes, has) {
-        if(typeof  classes === 'undefined') {
+        if (typeof  classes === 'undefined') {
             return;
         }
         var endPos = classes.length - 1;
-        if(classes[endPos] === has) {
+        if (classes[endPos] === has) {
             return classes[endPos];
         }
         return undefined;
@@ -17,8 +17,8 @@ var helpers = {
     },
     hasClass: function (classes, _class) {
         var i = 0;
-        for(; i < classes.length; i++) {
-            if(classes[i] === _class) {
+        for (; i < classes.length; i++) {
+            if (classes[i] === _class) {
                 return true;
             }
         }
@@ -27,15 +27,15 @@ var helpers = {
         var i = 0,
             classes = el.classList;
 
-        for(; i <classes.length; i++) {
-            if(classes[i] === _class) {
+        for (; i < classes.length; i++) {
+            if (classes[i] === _class) {
                 classes.remove(_class);
             }
         }
     },
     clearClassAll: function (els, _class) {
         var i = 0;
-        for(; i < els.length; i++) {
+        for (; i < els.length; i++) {
             helpers.clearClass(els[i], _class);
         }
     }
@@ -51,17 +51,17 @@ graph.popover = function () {
         offsetMethodUI = methodElem.getBoundingClientRect();
 
     getTokenUIElem.addEventListener("click", function (evt) {
-       getTokenUI.style.top = offsetTokenUI.top + offsetTokenUI.height + 'px';
-       getTokenUI.style.left = offsetTokenUI.left + 'px';
+        getTokenUI.style.top = offsetTokenUI.top + offsetTokenUI.height + 'px';
+        getTokenUI.style.left = offsetTokenUI.left + 'px';
     });
 
     methodElem.addEventListener("click", function (evt) {
-       methodUI.style.top = offsetMethodUI.top + offsetMethodUI.height + 'px';
-       methodUI.style.left = offsetMethodUI.left + 'px';
+        methodUI.style.top = offsetMethodUI.top + offsetMethodUI.height + 'px';
+        methodUI.style.left = offsetMethodUI.left + 'px';
     });
 
     var lis = methodUI.querySelectorAll("li");
-    lis.forEach(function(item, index) {
+    lis.forEach(function (item, index) {
         item.addEventListener("click", function (evt) {
             var classes = this.classList,
                 methodText = document.querySelector(".methodText"),
@@ -73,13 +73,12 @@ graph.popover = function () {
                 objAddField = document.querySelector(".addField");
 
 
-
             addField.className = "_1pvu addField";
             addField.innerHTML = '<a role="button" tabindex="0">Add a Field</a>';
 
             helpers.clearClassAll(lis, "_54nd");
 
-            if(!isActiveClass) {
+            if (!isActiveClass) {
                 helpers.addClass(this, "_54nd");
                 methodText.innerHTML = text;
             }
@@ -88,12 +87,12 @@ graph.popover = function () {
                     methodSubmit.insertBefore(addField, actionMethod.nextSibling);
                     break;
                 case 'GET':
-                    if(objAddField !== null) {
+                    if (objAddField !== null) {
                         methodSubmit.removeChild(objAddField);
                     }
                     break;
                 case 'DELETE':
-                    if(objAddField !== null) {
+                    if (objAddField !== null) {
                         console.log(objAddField)
                         methodSubmit.removeChild(objAddField);
                     }
@@ -108,40 +107,47 @@ graph.popover = function () {
                 fieldHTML += '<input type="text" class="_58al" placeholder="Name" value="">';
                 fieldHTML += '</label>';
                 fieldHTML += '<textarea class="_1pvs" placeholder="Value"></textarea>';
-                fieldHTML += '<button class="_1pvt _50zy _50-0 _50z- _5upp _42ft" type="button" title="Remove">';
+                fieldHTML += '<button class="_1pvt _50zy _50-0 _50z- _5upp _42ft removeField" type="button" title="Remove">';
                 fieldHTML += '<em class="_4qba" data-intl-translation="Remove" data-intl-trid="">Remove</em>';
                 fieldHTML += '</button>';
 
                 field.className = "_1pvq field";
                 field.innerHTML = fieldHTML;
                 methodSubmit.insertBefore(field, this.parentNode);
+
+                var removeField = document.querySelector(".removeField");
+                removeField.addEventListener("click", function (evt) {
+                    console.log('delete');
+                    var target = this.parentNode;
+                    methodSubmit.removeChild(target);
+                });
             });
+
         });
     });
-    
+
 
     document.addEventListener("click", function (evt) {
         var el = evt.target,
             closest,
             _target;
-
-
-        if(el.tagName.toLowerCase() === 'a') {
+        
+        if (el.tagName.toLowerCase() === 'a') {
             _target = helpers._hasClass(el.classList, 'getTokenUIElem') || helpers._hasClass(el.classList, 'methodElem');
         }
         else {
-            if(el.classList.length > 0 ) {
+            if (el.classList.length > 0 && el.tagName.toLowerCase() !== 'button') {
                 closest = el.parentNode.parentNode;
                 _target = helpers._hasClass(closest.classList, 'getTokenUIElem') || helpers._hasClass(el.parentNode.classList, 'methodElem');
             }
 
         }
 
-        if(_target !== "getTokenUIElem") {
+        if (_target !== "getTokenUIElem") {
             getTokenUI.style.top = "";
             getTokenUI.style.left = "";
         }
-        if(_target !== "methodElem") {
+        if (_target !== "methodElem") {
             methodUI.style.top = "";
             methodUI.style.left = "";
         }
