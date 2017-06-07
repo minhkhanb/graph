@@ -38,6 +38,11 @@ var helpers = {
         for (; i < els.length; i++) {
             helpers.clearClass(els[i], _class);
         }
+    },
+    removeItems: function (el, items) {
+        for(var i = 0; i < items.length; i++) {
+            el.removeChild(items[i]);
+        }
     }
 }
 
@@ -70,7 +75,8 @@ graph.popover = function () {
                 addField = document.createElement("div"),
                 methodSubmit = document.querySelector(".methodSubmit"),
                 actionMethod = document.querySelector(".actionMethod"),
-                objAddField = document.querySelector(".addField");
+                objAddField = document.querySelector(".addField"),
+                objField = document.querySelectorAll(".field");
 
 
             addField.className = "_1pvu addField";
@@ -90,12 +96,13 @@ graph.popover = function () {
                     if (objAddField !== null) {
                         methodSubmit.removeChild(objAddField);
                     }
+                    helpers.removeItems(methodSubmit, objField);
                     break;
                 case 'DELETE':
                     if (objAddField !== null) {
-                        console.log(objAddField)
                         methodSubmit.removeChild(objAddField);
                     }
+                    helpers.removeItems(methodSubmit, objField);
                     break;
             }
 
@@ -119,7 +126,8 @@ graph.popover = function () {
                 var fields = methodSubmit.querySelectorAll(".field");
 
                 fields.forEach(function (item, index) {
-                    item.addEventListener("click", function (evt) {
+                    var removeField = item.querySelector('.removeField');
+                    removeField.addEventListener("click", function (evt) {
                         try {
                             methodSubmit.removeChild(item);
                         }
