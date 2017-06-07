@@ -101,6 +101,7 @@ graph.popover = function () {
 
             var btnAddField = addField.querySelector('a');
             btnAddField.addEventListener("click", function (evt) {
+                evt.preventDefault();
                 var field = document.createElement("div"), fieldHTML;
 
                 fieldHTML = '<label class="_1pvr _55r1 _58ak _3ct8">';
@@ -115,12 +116,18 @@ graph.popover = function () {
                 field.innerHTML = fieldHTML;
                 methodSubmit.insertBefore(field, this.parentNode);
 
-                var removeField = document.querySelector(".removeField");
-                removeField.addEventListener("click", function (evt) {
-                    console.log('delete');
-                    var target = this.parentNode;
-                    methodSubmit.removeChild(target);
+                var fields = methodSubmit.querySelectorAll(".field");
+
+                fields.forEach(function (item, index) {
+                    item.addEventListener("click", function (evt) {
+                        try {
+                            methodSubmit.removeChild(item);
+                        }
+                        catch (e) {
+                        }
+                    });
                 });
+
             });
 
         });
@@ -131,7 +138,7 @@ graph.popover = function () {
         var el = evt.target,
             closest,
             _target;
-        
+
         if (el.tagName.toLowerCase() === 'a') {
             _target = helpers._hasClass(el.classList, 'getTokenUIElem') || helpers._hasClass(el.classList, 'methodElem');
         }
