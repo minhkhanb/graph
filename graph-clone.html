@@ -210,11 +210,17 @@
         <div class="_54nq _1sbz _558b _2n_z" id="js_3y">
             <div class="_54ng">
                 <ul class="_54nf" role="menu">
-                    <li class="_54ni _1sbv __MenuItem" role="presentation"><a class="_54nc" href="#"
-                                                                              role="menuitem"><span><span class="_54nh"><i
-                            alt="" class="img sp_jk3wwh-psrm sx_007f97"></i><span class="_2nax"><em class="_4qba"
-                                                                                                    data-intl-translation="Get User Access Token"
-                                                                                                    data-intl-trid="">Get User Access Token</em></span></span></span></a>
+                    <li class="_54ni _1sbv __MenuItem getTokenCode" role="presentation">
+                        <a class="_54nc" href="#" role="menuitem">
+                            <span>
+                                <span class="_54nh">
+                                    <i alt="" class="img sp_jk3wwh-psrm sx_007f97"></i>
+                                    <span class="_2nax">
+                                        <em class="_4qba" data-intl-translation="Get User Access Token" data-intl-trid="">Get User Access Token</em>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
                     </li>
                     <li class="_54ni _1sbv _5arm __MenuItem" role="presentation"><a class="_54nc" role="menuitem"><span><span
                             class="_54nh"><i alt="" class="img sp_jk3wwh-psrm sx_007f97"></i><span class="_2nax"><em
@@ -249,6 +255,645 @@
                         class="_54nh text">DELETE</span></span></a>
                 </li>
             </ul>
+        </div>
+    </div>
+</div>
+<div class="_10 uiLayer _4-hy _3qw hidden_elem" style="min-width: 1094px;">
+    <div class="_3ixn"></div>
+    <div class="_59s7" role="dialog" style="width: 660px; margin-top: 177px;">
+        <div class="_4t2a">
+            <div>
+                <div>
+                    <div>
+                        <div class="_4-i0">
+                            <div class="clearfix">
+                                <div class="_ohe lfloat"><h3 class="_52c9"><em class="_4qba"
+                                                                               data-intl-translation="Select Permissions"
+                                                                               data-intl-trid="">Select Permissions</em>
+                                </h3></div>
+                                <div class="_ohf rfloat">
+                                    <div class="_51-u">
+                                        <div class="_3-92 _6a _6b" value="v2.9">
+                                            <div class="uiPopover _6a _6b"><a
+                                                    class="_p _55pi _5vto _55_p _2agf _4o_4 _4jy0 _4jy3 _517h _51sy _42ft _nk"
+                                                    aria-haspopup="true" role="button" href="#"
+                                                    style="max-width: 200px;" tabindex="0" aria-controls="js_2zb"
+                                                    id="js_2zc"><span class="_55pe">v2.9</span><span alt=""
+                                                                                                     class="_3-99 _4o_3"><i
+                                                    alt="" class="img sp_9UXQLjJW_rV sx_a28986"></i></span></a></div>
+                                            <input type="hidden" name="version_selector" value="v2.9"></div>
+                                        <button class="layerCancel _51-t _50zy _50-0 _50z- _5upp _42ft" type="button"
+                                                title="Close"><em class="_4qba" data-intl-translation="Close"
+                                                                  data-intl-trid="">Close</em></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div font-size="medium" class="_4-i2 _pig  _50f4">
+                            <div class="_550r  _550u _550y _3w5n">
+                                <div><label><span class=" _50f3 _50f7"><div class="_3-8o"><em class="_4qba"
+                                                                                              data-intl-translation="User Data Permissions"
+                                                                                              data-intl-trid="">User Data Permissions</em></div></span></label>
+                                    <table id="user_data_permissions" cols="3" class="uiGrid _51mz" cellspacing="0"
+                                           cellpadding="0">
+                                        <tbody>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="email"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_660" value="on"><label
+                                                            class="uiInputLabelLabel"
+                                                            for="js_input_label_660">email</label></div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_hometown"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_661" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_661">user_hometown</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_religion_politics"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_662" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_662">user_religion_politics</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="publish_actions"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_663" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_663">publish_actions</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_likes"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_664" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_664">user_likes</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_status"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_665" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_665">user_status</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_about_me"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_666" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_666">user_about_me</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_location"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_667" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_667">user_location</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_tagged_places"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_668" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_668">user_tagged_places</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_birthday"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_669" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_669">user_birthday</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_photos"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_670" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_670">user_photos</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_videos"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_671" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_671">user_videos</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_education_history"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_672" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_672">user_education_history</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_posts"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_673" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_673">user_posts</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_website"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_674" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_674">user_website</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_friends"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_675" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_675">user_friends</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_relationship_details"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_676" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_676">user_relationship_details</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_work_history"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_677" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_677">user_work_history</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_games_activity"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_678" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_678">user_games_activity</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_relationships"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_679" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_679">user_relationships</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div><label><span class=" _50f3 _50f7"><div class="_3-8o"><em class="_4qba"
+                                                                                              data-intl-translation="Events, Groups &amp; Pages"
+                                                                                              data-intl-trid="">Events, Groups &amp; Pages</em></div></span></label>
+                                    <table id="events_groups_pages" cols="3" class="uiGrid _51mz" cellspacing="0"
+                                           cellpadding="0">
+                                        <tbody>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="ads_management"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_680" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_680">ads_management</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="pages_messaging"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_681" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_681">pages_messaging</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="read_page_mailboxes"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_682" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_682">read_page_mailboxes</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="ads_read"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_683" value="on"><label
+                                                            class="uiInputLabelLabel"
+                                                            for="js_input_label_683">ads_read</label></div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="pages_messaging_payments"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_684" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_684">pages_messaging_payments</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="rsvp_event"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_685" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_685">rsvp_event</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="business_management"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_686" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_686">business_management</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="pages_messaging_phone_number"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_687" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_687">pages_messaging_phone_number</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_events"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_688" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_688">user_events</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="manage_pages"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_689" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_689">manage_pages</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="pages_messaging_subscriptions"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_690" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_690">pages_messaging_subscriptions</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_managed_groups"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_691" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_691">user_managed_groups</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="pages_manage_cta"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_692" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_692">pages_manage_cta</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="pages_show_list"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_693" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_693">pages_show_list</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="pages_manage_instant_articles"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_694" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_694">pages_manage_instant_articles</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="publish_pages"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_695" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_695">publish_pages</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div><label><span class=" _50f3 _50f7"><div class="_3-8o"></div></span></label>
+                                    <table id="open_graph_actions" cols="3" class="uiGrid _51mz" cellspacing="0"
+                                           cellpadding="0">
+                                        <tbody>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_actions.books"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_696" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_696">user_actions.books</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_actions.music"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_697" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_697">user_actions.music</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_actions.video"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_698" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_698">user_actions.video</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_actions.fitness"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_699" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_699">user_actions.fitness</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="user_actions.news"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_700" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_700">user_actions.news</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div><label><span class=" _50f3 _50f7"><div class="_3-8o"><em class="_4qba"
+                                                                                              data-intl-translation="Other"
+                                                                                              data-intl-trid="">Other</em></div></span></label>
+                                    <table id="other" cols="3" class="uiGrid _51mz" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                        <tr class="_51mx">
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="read_audience_network_insights"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_701" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_701">read_audience_network_insights</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="read_custom_friendlists"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_702" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_702">read_custom_friendlists</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="_51mw _51m-">
+                                                <div style="width: 220px;">
+                                                    <div display="block"
+                                                         class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                            type="checkbox" name="read_insights"
+                                                            class="uiInputLabelInput uiInputLabelCheckbox"
+                                                            id="js_input_label_703" value="on"><label
+                                                            class="uiInputLabelLabel" for="js_input_label_703">read_insights</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="reAuthDiv" hidden="">
+                                    <div class="_5aj7">
+                                        <div class="_4bl9"></div>
+                                        <div class="_4bl7">
+                                            <div display="block" class="uiInputLabel clearfix uiInputLabelLegacy"><input
+                                                    type="checkbox" id="reAuthCheckbox" name="auth_rerequest"
+                                                    disabled="" class="uiInputLabelInput uiInputLabelCheckbox"
+                                                    value="on"><label class="uiInputLabelLabel" for="reAuthCheckbox"><em
+                                                    class="_4qba"
+                                                    data-intl-translation="Re-request Declined Permissions"
+                                                    data-intl-trid="">Re-request Declined Permissions</em></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div font-size="medium" class="_5a8u _5lnf uiOverlayFooter">
+                            <div font-size="medium" class="">
+                                <div class="clearfix">
+                                    <div class="_ohe lfloat">
+                                        <div>
+                                            <div><em class="_4qba"
+                                                     data-intl-translation="Public profile included by default"
+                                                     data-intl-trid="">Public profile included by default</em><img
+                                                    color="blue" class="hidden_elem img"
+                                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/y-/r/AGUNXgX_Wx3.gif"
+                                                    alt="" width="16" height="11"></div>
+                                        </div>
+                                    </div>
+                                    <div class="_ohf rfloat">
+                                        <div>
+                                            <div>
+                                                <button class="_4jy0 _4jy3 _4jy1 _51sy selected _42ft" role="button"
+                                                        type="submit" value="1"><em class="_4qba"
+                                                                                    data-intl-translation="Get Access Token"
+                                                                                    data-intl-trid="">Get Access
+                                                    Token</em></button>
+                                                <button class="_4jy0 _4jy3 _517h _51sy _42ft" role="button"
+                                                        type="submit" value="1"><em class="_4qba"
+                                                                                    data-intl-translation="Clear"
+                                                                                    data-intl-trid="">Clear</em>
+                                                </button>
+                                                <a action="cancel" class=" layerCancel _4jy0 _4jy3 _517h _51sy _42ft"
+                                                   role="button" href="#"><em class="_4qba"
+                                                                              data-intl-translation="Cancel"
+                                                                              data-intl-trid="">Cancel</em></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
